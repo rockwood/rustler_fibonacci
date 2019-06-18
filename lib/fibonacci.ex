@@ -14,4 +14,10 @@ defmodule Fibonacci do
       [x + y | all]
     end
   end
+
+  defmodule Rust do
+    use Rustler, otp_app: :fibonacci, crate: "fibonacci_rust"
+
+    def run(_number), do: :erlang.nif_error(:nif_not_loaded)
+  end
 end
