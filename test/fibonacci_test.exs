@@ -1,8 +1,9 @@
 defmodule FibonacciTest do
   use ExUnit.Case
-  doctest Fibonacci
 
-  test "greets the world" do
-    assert Fibonacci.hello() == :world
+  test "elixir" do
+    assert Fibonacci.Elixir.run(10) == 34
+    assert Fibonacci.Elixir.run(75) == 1304969544928657
+  end
   end
 end

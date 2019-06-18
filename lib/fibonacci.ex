@@ -1,18 +1,17 @@
 defmodule Fibonacci do
-  @moduledoc """
-  Documentation for Fibonacci.
-  """
+  defmodule Elixir do
+    def run(number) do
+      number |> do_run() |> List.first()
+    end
 
-  @doc """
-  Hello world.
+    def do_run(1), do: [0]
 
-  ## Examples
+    def do_run(2), do: [1 | do_run(1)]
 
-      iex> Fibonacci.hello()
-      :world
+    def do_run(number) when number > 2 do
+      [x, y | _] = all = do_run(number - 1)
 
-  """
-  def hello do
-    :world
+      [x + y | all]
+    end
   end
 end
