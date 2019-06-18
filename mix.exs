@@ -21,7 +21,8 @@ defmodule Fibonacci.MixProject do
 
   defp deps do
     [
-      {:rustler, "~> 0.20.0"}
+      {:rustler, "~> 0.20.0"},
+      {:benchee, "~> 1.0", only: :dev}
     ]
   end
 end
